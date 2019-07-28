@@ -9,7 +9,7 @@ import "element-ui/lib/theme-default/index.css";
 // import 'element-ui/lib/theme-chalk/index.css';
 // import { userInfo } from './api'
 import {
-  Timeline,
+  // Timeline,
   // TimelineItem,
   Button,
   Pagination,
@@ -46,7 +46,7 @@ import {
 import VueContentPlaceholders from 'vue-content-placeholders'
 Vue.use(VueContentPlaceholders)
 Vue.use(Button)
-console.log('TimelineItem===',Timeline)
+// console.log('TimelineItem===',Timeline)
 Vue.use(Pagination)
 Vue.use(Checkbox)
 Vue.use(CheckboxButton);
