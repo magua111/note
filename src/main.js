@@ -5,12 +5,12 @@ import store from './store/'
 import VueLazyload from 'vue-lazyload'
 import infiniteScroll from 'vue-infinite-scroll'
 import VueCookie from 'vue-cookie'
-import "element-ui/lib/theme-default/index.css";
+import 'element-ui/lib/theme-chalk/index.css'
 // import 'element-ui/lib/theme-chalk/index.css';
 // import { userInfo } from './api'
 import {
-  // Timeline,
-  // TimelineItem,
+  Timeline,
+  TimelineItem,
   Button,
   Pagination,
   Checkbox,
@@ -80,6 +80,8 @@ Vue.prototype.$notify = Notification
 Vue.prototype.$message = Message
 Vue.use(infiniteScroll)
 Vue.use(VueCookie)
+Vue.use(Timeline);
+Vue.use(TimelineItem);
 Vue.use(VueLazyload, {
   // preLoad: 1.3,
   // error: 'dist/error.png',

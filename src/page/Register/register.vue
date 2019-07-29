@@ -5,7 +5,7 @@
            <el-tabs v-model="activeName" @tab-click="registerOrLogin">
               <el-tab-pane label="SING-IN" name="first">
                 <div class='sign'>
-                  <el-form  :label-position="labelPosition" label-width="80px" :rules="rules" disabled='true'  ref="loginForm" :model="loginForm">
+                  <el-form  :label-position="labelPosition" label-width="80px" :rules="rules" ref="loginForm" :model="loginForm">
                   <!-- <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">  -->
                     <el-form-item label="Email address or mobile phone number" prop="name" class='userName' >
                       <el-input v-model="loginForm.name" placeholder='Please enter the'></el-input>
@@ -40,7 +40,7 @@
               </el-tab-pane>
               <el-tab-pane label="CREAT ACCOUNT" name="second">
                 <div class='sign'>
-                   <el-form  :label-position="labelPosition" label-width="80px" :rules="rulesRegister" disabled='true'  ref="registerForm" :model="registerForm">
+                   <el-form  :label-position="labelPosition" label-width="80px" :rules="rulesRegister" :disabled='true'  ref="registerForm" :model="registerForm">
                   <!-- <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">  -->
                     <el-form-item label="Your name" prop="name" >
                       <el-input v-model="registerForm.name" placeholder='Please enter the'></el-input>
@@ -247,7 +247,7 @@
         background:rgba(13,13,13,1);
         border:1px solid rgba(13,13,13,1);
         border-radius:22px;
-        margin-top: 10px;
+        margin-top: 25px;
       }
       .el-checkbox__inner{
         width: 15px;
@@ -255,7 +255,7 @@
         line-height: 15px;
         // background:rgba(255,255,255,1);
         border:1px solid rgba(13,13,13,1);
-        margin-right: 4px;
+        // margin-right: 4px;
       }
       .el-checkbox__inner:after{
         left: 4px;
@@ -264,7 +264,7 @@
         background-color: #0d0d0d;
       }
       .el-form-item{
-        margin-bottom: 20px;
+        margin-bottom: 0px;
       }
       .passwordItem{
         margin-bottom: 10px;
@@ -277,7 +277,7 @@
 <style lang="scss" scoped>
     .register {
       .sign{
-        padding-top: 10px;
+        // padding-top: 10px;
         padding-right: 45px;
         .passwordRule{
           font-size:15px;
@@ -288,8 +288,8 @@
           // padding-bottom: 10px;
           height: 30px;
           line-height: 30px;
-          margin-bottom: 15px;
-          padding-right: 15px;
+          // margin-bottom: 15px;
+          padding-right: 20px;
           // position: relative;
           img{
             padding-top: 8px;
@@ -306,6 +306,7 @@
           font-weight:400;
           color:rgba(51,51,51,1);
           line-height: 20px;
+          margin-top: 20px;
         }
         .remberLogin{
           margin-top: 10px;
@@ -328,15 +329,18 @@
         .passwordForget{
           position: relative;
           .passwordForgetTittle{
-            position: absolute;
-            font-size:12px;
-            font-family:ArialMT;
-            font-weight:400;
-            text-decoration:underline;
-            color:rgba(51,102,153,1);
-            top: -34px;
-            right: 18px;
-            cursor: pointer;
+              position: absolute;
+              font-size: 12px;
+              font-family: ArialMT;
+              font-weight: 400;
+              text-decoration: underline;
+              color: #336699;
+              top: -34px;
+              right: 18px;
+              display: inline-block;
+              cursor: pointer;
+              height: 30px;
+              line-height: 30px;
           }
         }
       }

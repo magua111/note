@@ -6,7 +6,7 @@
               <el-tab-pane label="PASSWORD  ASSISTANCE" name="first">
                 <div class='sign'>
                   <P class='forgetMessageTop'>Enter the email address or phone number associated with your Amazon account.</P>
-                  <el-form  :label-position="labelPosition" label-width="80px" :rules="rules" disabled='true'  ref="loginForm" :model="loginForm">
+                  <el-form  :label-position="labelPosition" label-width="80px" :rules="rules"  ref="loginForm" :model="loginForm">
                   <!-- <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">  -->
                     <el-form-item label="Email address or mobile phone number" prop="name" >
                       <el-input v-model="loginForm.name" placeholder='Please enter the'></el-input>
@@ -132,7 +132,7 @@
       font-family:ArialMT;
       font-weight:400;
       color:rgba(51,51,51,1);
-      margin-bottom: 10px;
+      // margin-bottom: 10px;
     }
 
     .el-tabs__item.is-active {
@@ -202,7 +202,7 @@
         background:rgba(13,13,13,1);
         border:1px solid rgba(13,13,13,1);
         border-radius:22px;
-        margin-top: 10px;
+        margin-top: 25px;
       }
       .el-checkbox__inner{
         width: 15px;
@@ -219,7 +219,7 @@
         background-color: #0d0d0d;
       }
       .el-form-item{
-        margin-bottom: 20px;
+        margin-bottom: 0px;
       }
       .passwordItem{
         margin-bottom: 10px;
@@ -239,7 +239,7 @@
           font-family:ArialMT;
           font-weight:400;
           color:rgba(51,51,51,1);
-          margin-bottom: 35px;
+          margin-bottom: 25px;
         }
         .passwordRule{
           font-size:15px;

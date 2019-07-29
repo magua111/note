@@ -8,6 +8,7 @@ const ForgetPassword = () => import('/page/ForgetPassword/forgetPassword.vue')
 const Orders = () => import('/page/Orders/orders.vue')
 const OrderDetail = () => import('/page/Orders/orderDetail.vue')
 const Packget = () => import('/page/Packget/packget.vue')
+const NeedReturn = () => import('/page/NeedReturn/needReturn.vue')
 
 
 
@@ -31,6 +32,8 @@ export default new Router({
         {path: 'orders', name: 'orders', component: Orders},
         {path: 'orderDetail', name: 'orderDetail', component: OrderDetail},
         {path: 'packget', name: 'packget', component: Packget},
+        {path: 'packget', name: 'packget', component: Packget},
+        {path: 'needReturn', name: 'needReturn', component: NeedReturn},
       ]
     },
     // {path: '/login', name: 'login', component: Login},

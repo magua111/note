@@ -81,7 +81,7 @@
               disabled
               show-score
               text-color="#facd0c"
-              score-template="{value1}">
+             >
             </el-rate>
             <span>({{value1}})</span>
             <span class='starCount'>17Reviews</span>

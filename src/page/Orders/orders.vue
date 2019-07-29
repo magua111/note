@@ -10,18 +10,21 @@
       <div class='headline'>
         <p class='yourTittle'>YOUR ORDERS</p>
         <div class="nav-list">
-          <el-autocomplete
+          <!-- <el-autocomplete
             placeholder="SEARCH"
             icon="search"
             v-model="input"
-            minlength=1
-            maxlength=100
             :fetch-suggestions="querySearchAsync"
             @select="handleSelect"
             :on-icon-click="handleIconClick"
             @keydown.enter.native="handleIconClick"
           >
-          </el-autocomplete>
+          </el-autocomplete> -->
+
+
+          <el-input placeholder="SEARCH" v-model="input">
+            <el-button slot="append" icon="el-icon-search"></el-button>
+          </el-input>
         </div>
       </div>
 
@@ -138,7 +141,7 @@ import { getCartList, cartDel, getQuickSearch } from "/api/goods";
 // import { loginOut, navList } from '/api/index'
 import { setStore, getStore, removeStore } from "/utils/storage";
 // import store from '../store/'
-import "element-ui/lib/theme-default/index.css";
+// import "element-ui/lib/theme-default/index.css";
 export default {
   data() {
     return {
@@ -577,21 +580,26 @@ export default {
       width: 100%;
     }
     .el-input__inner {
-      border-radius: 15px !important;
+      border: 1px solid #888!important;
+      border-top-left-radius: 13px;
+      border-bottom-left-radius: 13px;
       border-color: #c6c6c9;
       height: 25px;
       font-size:8px;
       font-family:ArialMT;
       font-weight:400;
       color:rgba(153,153,153,1);
+
     }
-    .el-input__icon {
-      border-top-right-radius: 15px;
-      border-bottom-right-radius: 15px;
-      background-color: #737373;
-      height: 25px;
-      width: 70px;
+    .el-input-group__append, .el-input-group__prepend{
+      border-radius: 13px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      background-color: #888;
+      border: none;
+      color: #fff;
     }
+
     .el-icon-search:before {
       font-size: 15px;
     }

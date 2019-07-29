@@ -8,17 +8,25 @@
           </div>
           <div class="right-box">
             <div class="nav-list">
-              <el-autocomplete
+              <!-- <el-autocomplete
                 placeholder="SEARCH"
                 icon="search"
                 v-model="input"
-                minlength=1
-                maxlength=100
                 :fetch-suggestions="querySearchAsync"
                 @select="handleSelect"
                 :on-icon-click="handleIconClick"
                 @keydown.enter.native="handleIconClick">
-              </el-autocomplete>
+              </el-autocomplete> -->
+
+
+              <el-input placeholder="SEARCH" v-model="input">
+                <el-button slot="append" icon="el-icon-search"></el-button>
+              </el-input>
+
+
+
+
+
             </div>
             <div class="nav-aside" ref="aside" :class="{fixed:st}">
               <router-link :to="{ path: '/register' }">
@@ -34,7 +42,6 @@
                <div class="operation shop">
                 <span class='collore1e'>shopping cart</span>
               </div>
-
             </div>
           </div>
         </div>
@@ -51,7 +58,7 @@
   // import { loginOut, navList } from '/api/index'
   import { setStore, getStore, removeStore } from '/utils/storage'
   // import store from '../store/'
-  import 'element-ui/lib/theme-default/index.css'
+  // import 'element-ui/lib/theme-default/index.css'
   export default{
     data () {
       return {
@@ -706,17 +713,29 @@
   .nav-list .el-input__inner{
     // text-align:center;
   }
-
+  .el-input-group__append, .el-input-group__prepend{
+    border: 1px solid #ccc;
+    background-color: #888;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
   .nav-list {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 20px;
     .el-input__inner {
-      border-radius: 15px!important;
+      // border-radius: 15px!important;
       border-color: #c6c6c9;
       height: 30px;
+      border: none;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
     }
+    .el-button--default{
+      color: #fff;
+    }
+
     .el-input__icon{
       border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
